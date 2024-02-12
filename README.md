@@ -13,16 +13,12 @@ This Android app showcases various products retrieved from the endpoint [https:/
    - Auto-refreshes products every 3 minutes.
    - Dedicated UI to show the last refresh time.
 
-3. **Tests:**
-   - Includes unit and instrumentation tests.
-
 ## Technologies Used
 
 - **Language:** Kotlin
 - **Networking:** Retrofit
 - **Image Loading:** Coil
 - **UI:** Jetpack Compose
-- **Testing:** JUnit, Espresso
 
 ## 3rd Party Dependencies
 
