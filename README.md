@@ -33,3 +33,46 @@ The app follows the MVVM (Model-View-ViewModel) architecture pattern:
 - **View:** Displays the UI and interacts with the user.
 - **ViewModel:** Acts as a bridge between the Model and the View, handling UI-related logic.
 
+## Installation
+
+To use this project, follow these steps:
+
+1. **Clone the Repository:**
+git clone https://github.com/Richa521/News.git
+
+
+2. **Open in Android Studio:**
+- Open Android Studio.
+- Choose "Open an existing Android Studio project" and select the cloned project.
+
+3. **Build and Run:**
+- Build and run the app on an Android emulator or physical device.
+
+## Download Instructions
+
+As the app is not available on the Google Play Store, you can download and install the APK using the following steps:
+
+### 1. Download the APK:
+
+- Click on the [APK link](https://drive.google.com/file/d/1-PfjRePGxg8gXGB0wOhypZTD0DdqD2l2/view?usp=sharing) to access the APK file on Google Drive.
+- Download the APK file to your device, whether it's your phone or your computer.
+
+### 2. Install on Android Studio:
+
+- Open Android Studio.
+- In the top menu, click on "File" > "Open" and select the downloaded APK file.
+- Android Studio will decompile and open the APK. You can inspect the contents, but note that running a release APK may not be straightforward.
+
+### 3. Install on Android Device:
+
+- On your Android device, go to Settings.
+- Navigate to "Security" or "Biometrics and security" (depending on your device).
+- Enable "Install unknown apps" or a similar option.
+- Open the file manager on your phone and locate the downloaded APK file.
+- Tap on the APK file to start the installation.
+- Follow the on-screen instructions to complete the installation.
+
+### 4. Run the App:
+
+- If installed through Android Studio, you can explore the app's contents.
+- If installed on your Android device, open the app to start exploring the latest news headlines.
