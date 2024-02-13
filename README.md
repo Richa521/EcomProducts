@@ -2,6 +2,11 @@
 
 This Android app showcases various products retrieved from the endpoint [https://dummyjson.com/products](https://dummyjson.com/products). Users can view a list of products, click on any product to see its details on a separate screen, and utilize swipe-to-refresh functionality to fetch the latest products. The app also auto-refreshes products every 3 minutes, and there's a dedicated UI to show the last refresh time.
 
+## Video Demo
+
+Check out the [video demo](https://drive.google.com/file/d/1gAVqjoWTbulfI0XkPxsjzoBFjbcwHWfL/view?usp=sharing) to see the app in action.
+
+
 ## Functional Requirements
 
 1. **List of Products:**
