@@ -46,14 +46,19 @@ fun ProductDetailScreen(
         topBar = {
             TopAppBar(
                 title = {
-                    Text(text = "Product Detail",style = MaterialTheme.typography.headlineSmall,
+                    Text(text = "Product Detail",style = MaterialTheme.typography.titleLarge,
                         color = MaterialTheme.colorScheme.primary)
                 },
                 navigationIcon = {
                     IconButton(onClick = onNavigateUp) {
-                        Icon(imageVector = Icons.Default.ArrowBack, contentDescription = null)
+                        Icon(
+                            imageVector = Icons.Default.ArrowBack,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.primary
+                        )
                     }
                 }
+
             )
         }
     ) {
@@ -85,7 +90,7 @@ fun ProductDetailScreen(
 
             Text(
                 text = product.title,
-                style = MaterialTheme.typography.headlineMedium,
+                style = MaterialTheme.typography.titleLarge,
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.primary
             )

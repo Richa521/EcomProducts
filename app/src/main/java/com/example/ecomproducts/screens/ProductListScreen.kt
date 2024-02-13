@@ -52,7 +52,7 @@ fun ProductListScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Products",style = MaterialTheme.typography.headlineMedium,
+                title = { Text("Products",style = MaterialTheme.typography.titleLarge,
                     color = MaterialTheme.colorScheme.primary) },
                 actions = {
                     LastRefreshTime(
@@ -118,7 +118,7 @@ fun ProductListItem(product: Product, onProductClick: (Product) -> Unit) {
         Spacer(modifier = Modifier.height(8.dp))
         Text(
             text = product.title,
-            style = MaterialTheme.typography.headlineSmall,
+            style = MaterialTheme.typography.titleLarge,
             fontWeight = FontWeight.Bold,
             color = MaterialTheme.colorScheme.primary
         )
