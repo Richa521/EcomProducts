@@ -38,7 +38,7 @@ The app follows the MVVM (Model-View-ViewModel) architecture pattern:
 To use this project, follow these steps:
 
 1. **Clone the Repository:**
-git clone https://github.com/Richa521/EcomProducts/tree/main
+git clone https://github.com/Richa521/EcomProducts
 
 
 2. **Open in Android Studio:**
