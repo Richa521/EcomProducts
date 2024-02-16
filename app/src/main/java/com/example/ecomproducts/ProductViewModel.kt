@@ -27,19 +27,15 @@ class ProductViewModel : ViewModel() {
     private val _loadedProductCount = MutableLiveData(10)
     val loadedProductCount: LiveData<Int> get() = _loadedProductCount
 
-    // Add LiveData for last refresh time
     private val _lastRefreshTime = MutableLiveData<String>()
     val lastRefreshTime: LiveData<String> get() = _lastRefreshTime
-
-
 
     init {
         fetchProducts()
 
-        // Schedule automatic refresh every 3 minutes
         viewModelScope.launch {
             while (true) {
-                delay(3*60*1000) // 3 minutes in milliseconds
+                delay(3*60*1000)
                 refreshProducts()
             }
         }
