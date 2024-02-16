@@ -57,7 +57,7 @@ class ProductViewModel : ViewModel() {
                 Log.d("ProductViewModel", "Received ${allProducts.size} products.")
 
                 if (allProducts.isEmpty()) {
-                    _loadedProductCount.value = 10
+                    _loadedProductCount.value = 0
                 } else {
                     val startIndex = (loadedProductCount.value ?: 0) - 10
                     val endIndex = loadedProductCount.value ?: 0
