@@ -50,37 +50,20 @@ class ProductViewModel : ViewModel() {
     private fun fetchProducts() {
         viewModelScope.launch {
             try {
-                Log.d("ProductViewModel", "Fetching products...")
-
                 val allProducts = RetrofitInstance.productService.getProducts().data ?: emptyList()
 
-                Log.d("ProductViewModel", "Received ${allProducts.size} products.")
+                val startIndex = (loadedProductCount.value ?: 0) - 10
+                val endIndex = loadedProductCount.value ?: 0
 
-                if (allProducts.isEmpty()) {
-                    _loadedProductCount.value = 0
-                } else {
-                    val startIndex = (loadedProductCount.value ?: 0) - 10
-                    val endIndex = loadedProductCount.value ?: 0
+                _products.value = allProducts.subList(startIndex.coerceAtLeast(0), endIndex.coerceAtMost(allProducts.size))
 
-                    val newProducts = allProducts.subList(
-                        startIndex.coerceAtLeast(0),
-                        endIndex.coerceAtMost(allProducts.size)
-                    )
-
-                    if (endIndex >= allProducts.size) {
-                        _loadedProductCount.value = allProducts.size
-                    }
-
-                    _products.value = newProducts
-                }
-
-                _lastRefreshTime.value = SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(Date())
+                _lastRefreshTime.value = SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(
+                    Date()
+                )
             } catch (e: Exception) {
-                Log.e("ProductViewModel", "Error fetching products: ${e.message}")
                 e.printStackTrace()
             } finally {
                 _isRefreshing.value = false
-                Log.d("ProductViewModel", "Fetch completed.")
             }
         }
     }
